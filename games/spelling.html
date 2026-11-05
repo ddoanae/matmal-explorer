@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#e9eafa">
+<title>맞말 탐험대 | 맞춤법 양자택일 챌린지</title>
+<style>
+:root{color-scheme:dark;--bg:#10131f;--panel:#1b2030;--panel2:#242b3c;--text:#f5f3ea;--muted:#a4acbf;--line:#374055;--accent:#dfec89;--danger:#ff8e96;--success:#a3edc0;--shadow:0 20px 65px #080b1480}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -20%,#343b58 0%,transparent 55%),var(--bg);font-family:ui-sans-serif,system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--text);min-height:100vh;padding:60px 16px 60px}button{font:inherit;cursor:pointer}button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}button:disabled{opacity:.48;cursor:not-allowed}.shell{max-width:780px;margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:18px}.brandmark{display:grid;place-items:center;width:39px;height:39px;border-radius:11px;background:var(--accent);color:#202636;font-weight:1000;font-size:20px}.mini{font-size:12px;color:var(--muted);letter-spacing:.06em}.surface{background:linear-gradient(150deg,#202637,#171c2b);border:1px solid #3b4358;border-radius:24px;padding:clamp(20px,5vw,44px);box-shadow:var(--shadow)}.label{font-size:12px;letter-spacing:.18em;color:var(--accent);font-weight:900}.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.14;letter-spacing:-.075em;margin:14px 0 12px}.hero p{color:#c0c7d7;line-height:1.8;margin:0 0 26px;word-break:keep-all}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}.tile{border:1px solid var(--line);border-radius:13px;text-align:center;padding:17px 5px;background:#ffffff06}.tile strong{display:block;font-size:22px;color:var(--text)}.tile span{display:block;font-size:12px;color:var(--muted);margin-top:5px}.btn{border:0;border-radius:13px;padding:16px 20px;font-weight:900;letter-spacing:-.025em;min-height:54px}.btn-primary{background:var(--accent);color:#1a2025;width:100%}.btn-secondary{border:1px solid #505971;background:#2b3244;color:var(--text)}.btn-row{display:flex;gap:10px;flex-wrap:wrap}.btn-row .btn{flex:1;min-width:130px}.btn:active:not(:disabled){transform:translateY(1px)}.hidden{display:none!important}.progress-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.progress-track{height:9px;background:#323c50;border-radius:100px;overflow:hidden;margin:16px 0 28px}.progress-fill{width:0;height:100%;background:var(--accent);transition:width .25s}.question-head{margin:0 0 22px}.question-head .sub{font-size:13px;color:var(--muted);margin:0 0 12px}.question-head h2{font-size:clamp(24px,5vw,34px);line-height:1.5;letter-spacing:-.05em;word-break:keep-all;margin:0}.options{display:grid;gap:11px}.option{display:flex;align-items:center;gap:15px;text-align:left;width:100%;border:1.5px solid #434d62;background:#272e40;border-radius:15px;padding:15px;min-height:68px;color:var(--text);transition:background .12s,border-color .12s}.option:hover:not(:disabled){background:#343d53}.option.selected{border-color:var(--accent);background:#404b43}.option.correct{border-color:var(--success);background:#264535}.option.incorrect{border-color:var(--danger);background:#4a2b38}.option:disabled{opacity:1;cursor:default}.num{width:34px;height:34px;flex:0 0 34px;border-radius:9px;display:grid;place-items:center;background:#131a29;color:#e5e9f1;font-size:14px;font-weight:900}.option.selected .num{background:var(--accent);color:#202a22}.option.correct .num{background:var(--success);color:#122a1e}.option.incorrect .num{background:var(--danger);color:#33151a}.option-text{flex:1;font-size:16px;font-weight:650;line-height:1.5}.feedback{border:1px solid #4d5968;border-radius:13px;background:#151c2c;padding:18px;margin-top:18px;line-height:1.75}.feedback strong{display:block;margin-bottom:5px}.feedback p{margin:0;color:#d5dbe5;font-size:14px;word-break:keep-all}.footer-action{margin-top:22px}.help{font-size:12px;color:var(--muted);text-align:center;margin-top:14px}.result-banner{position:relative;overflow:hidden;min-height:260px;border-radius:18px;display:flex;justify-content:center;align-items:center;flex-direction:column;margin-bottom:24px;border:1px solid #ffffff36;text-align:center;padding:25px}.result-banner .motif{font-size:88px;line-height:1.2;filter:drop-shadow(0 8px 0 #0002);animation:bob 3s ease-in-out infinite}.result-banner .tiername{margin:12px 0 3px;font-size:31px;letter-spacing:-.05em;font-weight:900}.result-banner .tiercopy{max-width:320px;font-size:13px;line-height:1.7}.tier1{background:radial-gradient(circle at 20% 15%,#ffe99c55,transparent 55%),linear-gradient(140deg,#294c43,#1d383a)}.tier2{background:radial-gradient(circle at 80% 10%,#89d3ff55,transparent 60%),linear-gradient(145deg,#2e4778,#263552)}.tier3{background:radial-gradient(circle at 70% 5%,#e2a6ff55,transparent 60%),linear-gradient(145deg,#6d385e,#39294d)}.tier4{background:radial-gradient(circle at 50% 0%,#fffca877,transparent 60%),linear-gradient(145deg,#705326,#43371f)}@keyframes bob{50%{transform:translateY(-6px)}}.score-number{font-size:clamp(58px,13vw,86px);font-weight:1000;letter-spacing:-.09em;line-height:1;margin:10px 0}.score-number small{font-size:22px;letter-spacing:0;color:var(--muted);font-weight:700;margin-left:9px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:20px 0}.stats div{text-align:center;border:1px solid var(--line);padding:15px 8px;border-radius:11px;background:#ffffff05}.stats strong{display:block;font-size:23px}.stats span{display:block;font-size:12px;color:var(--muted);margin-top:4px}.tabs{display:flex;gap:8px;margin:27px 0 17px}.tab{flex:1;padding:13px 7px;border-radius:10px;background:#252d3e;color:#c9d0dd;border:1px solid #435067;font-weight:800}.tab[aria-selected=true]{background:var(--accent);color:#192020;border-color:var(--accent)}.sheet{display:grid;gap:11px}.answer-card{background:#262d3f;border:1px solid #424c60;border-radius:14px;padding:17px}.answer-card .card-head{display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:12px;color:#b2bcd0;margin-bottom:9px}.answer-card .card-head .status{font-weight:900}.answer-card h3{font-size:16px;line-height:1.5;margin:0 0 10px;letter-spacing:-.03em}.answer-card p{margin:6px 0;font-size:13px;line-height:1.65;color:#cbd3e1}.answer-card b{color:#edf1fa}.empty{text-align:center;padding:30px 15px;border:1px dashed var(--line);border-radius:13px;color:var(--muted)}.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:16px 0 22px}.tier-mini{border:1px solid var(--line);background:#ffffff05;border-radius:11px;padding:13px 5px;text-align:center}.tier-mini .symbol{font-size:27px}.tier-mini strong{display:block;font-size:12px;margin:5px 0}.tier-mini span{font-size:11px;color:var(--muted)}.disclaimer{font-size:12px;color:var(--muted);line-height:1.7;margin-top:15px}@media(max-width:550px){body{padding:60px 12px 50px}.surface{border-radius:18px;padding:20px}.tiers{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:39px}.option{min-height:64px}.top{margin-bottom:15px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Soft atmospheric gradient: editable CSS artwork, no network assets needed. */
+:root{color-scheme:light;--bg:#e7eafc;--panel:#fff;--panel2:#f8faff;--text:#1d2540;--muted:#66718a;--line:#d9dff0;--accent:#334d9a;--danger:#b83257;--success:#177954;--shadow:0 18px 58px rgba(71,89,154,.12)}
+body{color:var(--text);background:#dfe8fa;position:relative;isolation:isolate;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse 62% 48% at 17% 16%,rgba(255,246,255,.97),transparent 80%),radial-gradient(ellipse 63% 65% at 89% 75%,rgba(124,210,255,.91),transparent 75%),radial-gradient(ellipse 48% 46% at 57% 23%,rgba(184,189,250,.90),transparent 82%),radial-gradient(ellipse 42% 45% at 7% 86%,rgba(255,249,253,.95),transparent 74%),linear-gradient(130deg,#e7eafb,#c8d7fb 57%,#8bd5fb)}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(140deg,rgba(255,255,255,.20),transparent 70%)}
+.brand{color:#1b2743}.brandmark{background:#253b85;color:white;border-radius:13px}.mini{color:#66728a}.surface{background:rgba(255,255,255,.83);border:1px solid rgba(255,255,255,.83);box-shadow:var(--shadow);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+.label{color:#3c5ba6}.hero h1{color:#1d2647}.hero p{color:#56617b}.tiles .tile,.stats div,.tier-mini{background:rgba(238,242,252,.70);border-color:#e0e6f3}.tile strong,.stats strong{color:#243354}.tile span,.stats span,.tier-mini span{color:#6d7891}
+.btn-primary{background:#263c86;color:#fff;box-shadow:0 8px 22px rgba(49,79,161,.16)}.btn-secondary{background:#f4f6fc;border-color:#d5deee;color:#273759}.btn:focus-visible,.option:focus-visible,.tab:focus-visible{outline:3px solid #6488e8;outline-offset:3px}
+.progress-track{background:#e8edfa}.progress-fill{background:linear-gradient(90deg,#8196e5,#5daee9)}.question-head .sub,.help,.disclaimer{color:#69758e}
+.option{background:rgba(251,252,255,.85);border-color:#d7dff0;color:#1d2845}.option:hover:not(:disabled){background:#f0f5ff;border-color:#aabce6}.option.selected{background:#e7edff;border-color:#5274c4;box-shadow:0 0 0 1px #5274c4 inset}.num{background:#e9edf8;color:#3d507f}.option.selected .num{background:#29478f;color:white}.option-text{color:#263452}
+.tabs .tab{background:#edf1fa;border-color:#dce4f2;color:#5a6784}.tabs .tab[aria-selected=true]{background:#2b438b;color:#fff;border-color:#2b438b}.answer-card{background:#f8faff;border-color:#e0e6f2}.answer-card .card-head{color:#6b7691}.answer-card h3{color:#24314d}.answer-card p{color:#596680}.answer-card b{color:#24314d}.empty{color:#6a7590}.tier-mini strong{color:#24314d}
+.result-banner{color:white;border-color:rgba(255,255,255,.55)}.tier1{background:radial-gradient(circle at 20% 14%,#eafded8f,transparent 58%),linear-gradient(135deg,#7cbd9e,#4c927f)}.tier2{background:radial-gradient(circle at 80% 12%,#d6eeffac,transparent 65%),linear-gradient(135deg,#79a5d7,#537eb8)}.tier3{background:radial-gradient(circle at 70% 7%,#f5e1ff9c,transparent 65%),linear-gradient(135deg,#b78ecc,#8860aa)}.tier4{background:radial-gradient(circle at 50% 4%,#fff3baaa,transparent 65%),linear-gradient(135deg,#d9bc78,#ae8c56)}
+@media(max-width:550px){body::before{background:radial-gradient(ellipse at 18% 18%,#fff4ff,transparent 67%),radial-gradient(ellipse at 91% 75%,#8bd8ff,transparent 74%),linear-gradient(140deg,#e8eafa,#b3c5f5)}}
+/* Primary action buttons: neutral black instead of blue. */
+.btn-primary{background:#111111;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.13)}
+.btn-primary:hover:not(:disabled){background:#292929}
+.btn-primary:focus-visible{outline:3px solid #777;outline-offset:3px}
+
+/* v5: unified neutral-black primary across interactive UI.
+   Keep the atmospheric blue-lilac background and the four result-tier artworks. */
+:root{--accent:#111111;--text:#171717;--muted:#626262;--line:#dedee2;--shadow:0 18px 58px rgba(0,0,0,.10)}
+.brand,.hero h1,.tile strong,.stats strong,.tier-mini strong,.answer-card h3,.answer-card b{color:#171717}
+.brandmark{background:#111111;color:#fff}
+.label{color:#111111}
+.hero p,.mini,.tile span,.stats span,.tier-mini span,.question-head .sub,.help,.disclaimer{color:#626262}
+.btn-primary{background:#111111;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.13)}
+.btn-primary:hover:not(:disabled){background:#292929}
+.btn-secondary{background:#fff;border-color:#c9c9cf;color:#171717}
+.btn-secondary:hover:not(:disabled){background:#f2f2f2}
+.btn:focus-visible,.option:focus-visible,.tab:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #555;outline-offset:3px}
+.progress-track{background:#e5e5e8}
+.progress-fill{background:#111111}
+.option{background:rgba(255,255,255,.88);border-color:#d1d1d6;color:#171717}
+.option:hover:not(:disabled){background:#f4f4f5;border-color:#8b8b92}
+.option.selected{background:#f0f0f1;border-color:#111111;box-shadow:0 0 0 1px #111111 inset}
+.num{background:#ebebed;color:#333333}
+.option.selected .num{background:#111111;color:white}
+.option-text{color:#171717}
+.tabs .tab{background:#f0f0f2;border-color:#d4d4d8;color:#555}
+.tabs .tab[aria-selected=true]{background:#111111;color:#fff;border-color:#111111}
+.answer-card{background:#fcfcfd;border-color:#dddde1}
+.answer-card .card-head,.answer-card p{color:#555}
+.tiles .tile,.stats div,.tier-mini{background:rgba(255,255,255,.65);border-color:#dedee2}
+.home-nav{display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:#111;font-size:13px;font-weight:750;margin:-5px 0 14px;padding:8px 11px;border-radius:99px;background:rgba(255,255,255,.72);border:1px solid #d9d9df}.home-nav:hover{background:#fff}</style>
+</head>
+<body>
+<div class="shell">
+<header class="top"><div class="brand"><div class="brandmark">가</div><span>맞말 탐험대</span></div><div class="mini">KOREAN SPELLING QUIZ</div></header>
+<main>
+<a class="home-nav" href="../index.html" aria-label="메인으로 돌아가기">← 전체 게임 보기</a>
+<section id="home" class="surface hero">
+ <div class="label">20 QUESTIONS · 4 LEVELS</div>
+ <h1>아는 듯,<br>헷갈리는 맞춤법.</h1>
+ <p>“금새”일까 “금세”일까? 두 표현 중 올바른 말을 골라 봐요.<br>문제를 모두 푼 후 점수와 나만의 맞춤법 등급, 정답과 해설이 한꺼번에 공개됩니다.</p>
+ <div class="tiles"><div class="tile"><strong>20</strong><span>양자택일 문제</span></div><div class="tile"><strong>100</strong><span>총점</span></div><div class="tile"><strong>4</strong><span>등급</span></div></div>
+ <button id="startBtn" class="btn btn-primary">게임 시작하기 →</button>
+ <div class="tiers"><div class="tier-mini"><div class="symbol">🌱</div><strong>말씨앗</strong><span>0–45점</span></div><div class="tier-mini"><div class="symbol">🧭</div><strong>말탐험가</strong><span>50–65점</span></div><div class="tier-mini"><div class="symbol">📚</div><strong>말장인</strong><span>70–85점</span></div><div class="tier-mini"><div class="symbol">👑</div><strong>말마스터</strong><span>90–100점</span></div></div>
+ <p class="disclaimer">등급 그래픽은 임시 콘셉트예요. 확정된 시안이 나오면 각 등급의 그래픽만 독립적으로 교체할 수 있도록 구성했습니다.</p>
+</section>
+<section id="game" class="surface hidden" aria-live="polite">
+ <div class="progress-top"><div class="label">SPELLING CHALLENGE</div><div class="mini" id="counter">01 / 20</div></div>
+ <div class="progress-track" role="progressbar" aria-label="게임 진행도" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0" id="progress"><div class="progress-fill" id="progressFill"></div></div>
+ <div class="question-head"><p class="sub">두 표현 중 올바른 하나를 선택하세요.</p><h2 id="questionTitle"></h2></div>
+ <div id="options" class="options"></div>
+ <div class="footer-action"><button id="submitBtn" class="btn btn-primary" disabled>다음 문제 →</button></div>
+ <div class="help">게임 도중에는 정답을 공개하지 않아요. 모든 정답과 해설은 마지막 결과 화면에서 확인할 수 있어요.</div>
+</section>
+<section id="results" class="surface hidden">
+ <div class="label">YOUR FINAL RESULT</div>
+ <div class="result-banner tier1" id="resultBanner"><div class="motif" id="tierMotif" aria-hidden="true">🌱</div><div class="tiername" id="tierName"></div><div class="tiercopy" id="tierDescription"></div></div>
+ <div class="mini">최종 스코어</div><div class="score-number"><span id="scoreValue">0</span><small>/ 100점</small></div>
+ <div class="stats"><div><strong id="correctCount">0</strong><span>정답</span></div><div><strong id="wrongCount">0</strong><span>오답</span></div><div><strong id="accuracy">0%</strong><span>정답률</span></div></div>
+ <div class="btn-row"><button id="retryBtn" class="btn btn-primary">다시 도전하기 ↻</button><button id="copyBtn" class="btn btn-secondary">결과 복사</button></div>
+ <div class="tabs" role="tablist" aria-label="문제 복습"><button class="tab" id="wrongTab" role="tab" aria-selected="true" aria-controls="answerPanel">오답노트</button><button class="tab" id="allTab" role="tab" aria-selected="false" aria-controls="answerPanel">전체 정답지</button></div>
+ <div class="sheet" id="answerPanel" role="tabpanel"></div>
+ <p class="disclaimer">문제와 보기 순서는 매 게임 무작위로 배치됩니다. 플레이 중에는 채점 결과를 공개하지 않으며, 종료 후 오답노트와 전체 정답지에서 확인할 수 있습니다.</p>
+ </section>
+</main>
+</div>
+<script>
+'use strict';
+// Each item is a self-contained question asset. Answer is the zero-based index of options.
+const QUESTION_BANK = [
+ {"q": "오늘이 몇 월 ___이지?", "o": ["몇일", "며칠"], "a": 1, "e": "'며칠'이 올바른 표기입니다. '몇일'은 표준 표기가 아닙니다."},
+ {"q": "시간이 ___ 지나갔어.", "o": ["금새", "금세"], "a": 1, "e": "'금세'는 '금시에'의 준말입니다."},
+ {"q": "그 말을 듣고 정말 ___.", "o": ["어이없었어", "어의없었어"], "a": 0, "e": "'어이없다'가 올바른 표기입니다."},
+ {"q": "___ 친구를 만났어.", "o": ["오랫만에", "오랜만에"], "a": 1, "e": "'오랜만에'는 한 단어이므로 붙여 씁니다."},
+ {"q": "___ 그렇게까지 할 필요는 없어.", "o": ["굳이", "구지"], "a": 0, "e": "'굳이'가 바른 표기입니다. 발음은 [구지]입니다."},
+ {"q": "밥을 먹고 ___를 했어.", "o": ["설겆이", "설거지"], "a": 1, "e": "표준어는 '설거지'입니다."},
+ {"q": "정말 ___ 일이 벌어졌어.", "o": ["희한한", "희안한"], "a": 0, "e": "'희한하다'가 바른 표기입니다."},
+ {"q": "집에 가면서 ___ 생각했어.", "o": ["곰곰히", "곰곰이"], "a": 1, "e": "'곰곰이'라고 씁니다."},
+ {"q": "먼지를 ___ 닦아 줘.", "o": ["깨끗이", "깨끗히"], "a": 0, "e": "'깨끗이'가 바른 표기입니다."},
+ {"q": "과자를 봉지 ___ 먹었어.", "o": ["통채로", "통째로"], "a": 1, "e": "'통째로'가 바른 표기입니다."},
+ {"q": "내일 학교에서 ___.", "o": ["봬요", "뵈요"], "a": 0, "e": "'봬요'는 '뵈어요'의 준말입니다."},
+ {"q": "드디어 준비가 다 ___.", "o": ["됬어", "됐어"], "a": 1, "e": "'됐어'는 '되었어'의 준말입니다."},
+ {"q": "여기서 사진 찍으면 ___.", "o": ["안 돼", "않 돼"], "a": 0, "e": "부정의 뜻을 나타내는 '안 돼'가 맞습니다."},
+ {"q": "너 지금 ___ 일이야?", "o": ["왠", "웬"], "a": 1, "e": "'웬 일이야?'가 바른 표현입니다."},
+ {"q": "___ 오늘은 기분이 좋네.", "o": ["왠지", "웬지"], "a": 0, "e": "'왠지'는 '왜인지'가 줄어든 말입니다."},
+ {"q": "휴대폰을 잃어버렸어. 나 이제 ___?", "o": ["어떻해", "어떡해"], "a": 1, "e": "'어떡해'는 '어떻게 해'의 준말입니다."},
+ {"q": "퀴즈의 정답을 정확히 ___.", "o": ["맞혔다", "맞췄다"], "a": 0, "e": "정답을 알아내는 건 '맞히다'입니다. 비교하거나 조정하는 건 '맞추다'입니다."},
+ {"q": "온라인 쇼핑몰에서 카드로 ___.", "o": ["결재했다", "결제했다"], "a": 1, "e": "돈을 지불하는 것은 '결제', 서류를 승인하는 것은 '결재'입니다."},
+ {"q": "지도에서 목적지를 손가락으로 ___.", "o": ["가리켰다", "가르켰다"], "a": 0, "e": "방향이나 대상을 짚어 보이는 것은 '가리키다'입니다."},
+ {"q": "나는 그 일을 혼자서도 ___.", "o": ["할수 있다", "할 수 있다"], "a": 1, "e": "의존 명사 '수'는 띄어 씁니다. '할 수 있다'가 맞습니다."}
+];
+const TIERS = [
+ {min:0,max:45,name:'말씨앗',motif:'🌱',className:'tier1',description:'아직 싹트는 중! 오늘부터 한 문제씩 차근차근 배워 봐요.'},
+ {min:50,max:65,name:'말탐험가',motif:'🧭',className:'tier2',description:'말의 길을 찾는 탐험가! 헷갈리는 표현을 하나씩 발견했어요.'},
+ {min:70,max:85,name:'말장인',motif:'📚',className:'tier3',description:'맞춤법 감각이 꽤 뛰어나요. 이제 작은 차이까지 놓치지 않네요.'},
+ {min:90,max:100,name:'말마스터',motif:'👑',className:'tier4',description:'놀라운 실력! 한국어 맞춤법 마스터에 가까워요.'}
+];
+const $=id=>document.getElementById(id);
+const shuffle=list=>{const copy=[...list];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;};
+let questions=[],responses=[],index=0,choice=null,activeTab='wrong';
+function show(screen){for(const id of ['home','game','results'])$(id).classList.toggle('hidden',id!==screen);window.scrollTo({top:0,behavior:'instant'});}
+function start(){
+ questions=shuffle(QUESTION_BANK).map(item=>{
+  const choices=shuffle(item.o.map((text,i)=>({text,correct:i===item.a})));
+  return {q:item.q,o:choices.map(x=>x.text),a:choices.findIndex(x=>x.correct),e:item.e};
+ });
+ responses=[];index=0;choice=null;show('game');renderQuestion();
+}
+function renderQuestion(){const q=questions[index];choice=null;
+ $('counter').textContent=`${String(index+1).padStart(2,'0')} / ${questions.length}`;
+ $('progressFill').style.width=`${index/questions.length*100}%`;
+ $('progress').setAttribute('aria-valuenow',String(index));
+ $('questionTitle').textContent=q.q;
+ $('options').replaceChildren();
+ q.o.forEach((option,i)=>{const b=document.createElement('button');b.type='button';b.className='option';b.setAttribute('aria-pressed','false');
+  const n=document.createElement('span');n.className='num';n.textContent=i+1;
+  const t=document.createElement('span');t.className='option-text';t.textContent=option;
+  b.append(n,t);b.addEventListener('click',()=>select(i));$('options').appendChild(b);
+ });
+ $('submitBtn').disabled=true;
+ $('submitBtn').textContent=index===questions.length-1?'결과 확인하기 →':'다음 문제 →';
+}
+function select(i){choice=i;Array.from($('options').children).forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});$('submitBtn').disabled=false;}
+function submit(){if(choice===null)return;responses.push(choice);index++;if(index<questions.length){renderQuestion();}else{renderResults();}}
+function renderResults(){show('results');$('progressFill').style.width='100%';
+ const correct=responses.filter((v,i)=>v===questions[i].a).length,score=correct*5,tier=TIERS.find(t=>score>=t.min&&score<=t.max);
+ $('resultBanner').className='result-banner '+tier.className;$('tierMotif').textContent=tier.motif;$('tierName').textContent=tier.name;$('tierDescription').textContent=tier.description;
+ $('scoreValue').textContent=score;$('correctCount').textContent=correct;$('wrongCount').textContent=questions.length-correct;$('accuracy').textContent=(correct/questions.length*100).toFixed(0)+'%';
+ setTab('wrong');
+}
+function setTab(tab){activeTab=tab;$('wrongTab').setAttribute('aria-selected',String(tab==='wrong'));$('allTab').setAttribute('aria-selected',String(tab==='all'));renderSheet();}
+function renderSheet(){const panel=$('answerPanel');panel.replaceChildren();const list=questions.map((q,i)=>({q,i,selected:responses[i],correct:responses[i]===q.a})).filter(item=>activeTab==='all'||!item.correct);
+ if(!list.length){const empty=document.createElement('div');empty.className='empty';empty.textContent='전부 맞혔어요! 복습할 오답이 없어요. 🎉';panel.appendChild(empty);return;}
+ for(const item of list){const card=document.createElement('article');card.className='answer-card';const top=document.createElement('div');top.className='card-head';const id=document.createElement('span');id.textContent=`Q${String(item.i+1).padStart(2,'0')}`;const status=document.createElement('span');status.className='status';status.style.color=item.correct?'var(--success)':'var(--danger)';status.textContent=item.correct?'✓ 정답':'✕ 오답';top.append(id,status);
+ const title=document.createElement('h3');title.textContent=item.q.q;
+ const selected=document.createElement('p');selected.textContent=`내가 고른 답: ${item.selected+1}번 · ${item.q.o[item.selected]}`;
+ const answer=document.createElement('p');answer.textContent=`올바른 답: ${item.q.a+1}번 · ${item.q.o[item.q.a]}`;
+ const why=document.createElement('p');why.textContent=`해설: ${item.q.e}`;
+ card.append(top,title,selected,answer,why);panel.appendChild(card);}
+}
+function copyResult(){const correct=responses.filter((v,i)=>v===questions[i].a).length;const score=correct*5;const tier=TIERS.find(t=>score>=t.min&&score<=t.max);const text=`맞말 탐험대 맞춤법 챌린지\n최종 점수: ${score}/100점\n등급: ${tier.name}\n정답: ${correct}/20문제`;const b=$('copyBtn');
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>{b.textContent='복사 완료 ✓';setTimeout(()=>b.textContent='결과 복사',1800);}).catch(()=>{b.textContent='복사 불가';});}else{b.textContent='복사 불가 · HTTPS에서 이용';}
+}
+$('startBtn').addEventListener('click',start);$('retryBtn').addEventListener('click',start);$('submitBtn').addEventListener('click',submit);$('wrongTab').addEventListener('click',()=>setTab('wrong'));$('allTab').addEventListener('click',()=>setTab('all'));$('copyBtn').addEventListener('click',copyResult);
+</script>
+</body>
+</html>
